@@ -44,7 +44,7 @@ html(lang='en')
 					h2 PHP, HTML, and JS
 					p
 						|	PHP is a number one web development language. 
-						|	Together with HTML and Javascript, it brings a world of 
+						|	Together with HTML and Javascript, it brings the world of 
 						|	world wide web to its current state nowadays.
 				.col-md-4
 					img(class='img-responsive', src='http://placehold.it/360x222')
@@ -116,7 +116,11 @@ html(lang='en')
 			+work('In-house Game Engine', 'http://placehold.it/165x220', 'tag-cppcs', 'tag-gamedev', 'tag-classwork')
 				.description
 					p
-						|	Game engine in keenan class
+						|	In Ed Keenan's Game Engine class, students are given a task to build full-fledged game engine in C++.
+						|	It's composed of many subsystem, namely Math Engine (Vector, Matrix, and Quaternion), Rendering System, and Object Manager.
+						|	Each part can be swapped in and out easily. 
+					p
+						|	In the second part of class, students upgrade their engine to support loading of models with animation.
 				.links
 					a(class='btn btn-primary', href='http://www.cdm.depaul.edu/academics/pages/classinfo.aspx?Term=20152&ClassNbr=20192&fid=718577') Class Website
 					|	 
@@ -127,7 +131,11 @@ html(lang='en')
 			+work('Network-enabled Omega Race', 'http://placehold.it/165x220', 'tag-cppcs', 'tag-gamedev', 'tag-classwork')
 				.description
 					p
-						|	Game network in keenan class
+						|	In Ed Keenan's Game Networking class, students are tasked with converting an Omega Race X 
+						|	(ported version of 
+						a(href='http://en.wikipedia.org/wiki/Omega_Race') Omega Race
+						|	, an arcade game by Midway)
+						|	into a network-enabled multiplayer game. It uses Windows Live for base networking.
 				.links
 					a(class='btn btn-primary', href='http://www.cdm.depaul.edu/academics/pages/classinfo.aspx?Term=20143&ClassNbr=30494&fid=718577') Class Website
 					|	 
@@ -136,114 +144,198 @@ html(lang='en')
 			+work('Optimization of C++ Particle System', 'http://placehold.it/165x220', 'tag-cppcs', 'tag-gamedev', 'tag-classwork')
 				.description
 					p
-						|	C++ optimization in keenan class
+						|	In Ed Keenan's optimization class, students are given a particle system.
+						|	The goal is to make this particle system fast. Many technique is employed to solve this problem, such as
+					ol
+						li Hot-Cold data structure
+						li SIMD
+						li Return Value Optimization
+						li Implicit Conversion striping
+						li Proxy Object
+					p
+						|	The final product increase speed by 2x (10x for calculation). It renders a vortex of 20k particles under 10 ms, with calculation taken only 1 ms.
 				.links
 					a(class='btn btn-primary', href='http://www.cdm.depaul.edu/academics/pages/classinfo.aspx?Term=20151&ClassNbr=17026&fid=718577') Class Website
 					|	 
 					a(class='btn btn-default', href='https://www.dropbox.com/s/zymd56dr7oj2ozl/GameParticles.rar?dl=0') Final Project Executable Download
 					
-			+work('Web-based Valve\'s Source Model Viewer (In progress)', 'http://placehold.it/165x220', 'tag-cppcs', 'tag-gamedev', 'tag-hobby')
+			+work('Web-based Valve\'s Source Model Viewer (Work in progress)', 'http://placehold.it/165x220', 'tag-cppcs', 'tag-gamedev', 'tag-hobby')
 				.description
 					p
-						|	Web-based model viewer that accepts Valve's Source format (MDL, VVD, VMT, VTF). Work in progress.
+						|	Web-based model viewer that accepts Valve's Source format (MDL, VVD, VMT, VTF). Written in C++ and converted to Asm.js using Emscripten. 
+					p(class='text-danger')
+						|	Work in progress.
 						
 			+work('Iconic Encounter (Work in progress)', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
 				.description
 					p
-						|	C++ optimization in keenan class
+						|	Iconic Encounter is a fighting game with well-known character. 
+						|	Join the fight with John Lennon, Audrey Hepburn, Teddy Roosevelt, or Mahatma Gandhi.
+						|	Aim at casual gamer, control is simple for one to enjoy, yet deep enough for experienced player to benefit from.
+						|	Throw an opponent out of stage, and victory shall be yours.
+					p
+						|	Iconic Encounter is a graduate-level capstone project. 
+						|	It's developed by Katryna Check, Corey Kuchynka, Deandre Chenshaw, Joshua Servin, and myself 
+						|	under supervision of 
+						a(href='http://www.brianschrank.com/') Asst Prof Brian Schrank
+						|	.
 				.links
 					a(class='btn btn-primary', href='http://www.quintforcedev.com/current-build') Website
+					|	 
+					a(class='btn btn-default', href='https://www.youtube.com/watch?v=9F8QeLj3BA8') Video from Spring Showcase
 					
 			+work('[VR] MockBand', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
 				.description
 					p
-						|	[VR] MockBand
+						|	MockBand is a VR karaoke game. It uses both head tracking and audio input to provide
+						|	feedback in a virtual world.
 				.links
 					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=2NyhvdtCaCs') Video
 					|	 
 					a(class='btn btn-default', href='https://www.dropbox.com/s/yboaup8747z84hy/Mockband-0.95.rar?dl=0') Executable Download
+				.footnote
+					br
+					small 
+						|	This game is a part of 
+						a(href='http://brianschrank.com/vrgames/') VR Game class
 					
 			+work('[VR] DayGround', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
 				.description
 					p
-						|	[VR] DayGround
+						|	DayGround is a VR game that aims to provide alternate reality to player. Its use of vibrant color and lack of shadow
+						|	gives player an unconventional experience.
 				.links
 					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=XnNrcCkM-UQ') Video
 					|	 
 					a(class='btn btn-default', href='https://www.dropbox.com/s/yz64bekclpop8mm/DayGround-0.6-NoOVR.rar?dl=0') Executable Download (Non-VR)
+				.footnote
+					br
+					small 
+						|	This game is a part of 
+						a(href='http://brianschrank.com/vrgames/') VR Game class
 			
 			+work('[VR] Last night', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
 				.description
 					p
-						|	[VR] Last Night
+						|	Last Night is a VR game that aims to induce player into altered state. 
+						|	The player starts the game lying down. He or she will then wake up in this VR world 
+						|	being sucked into a black hole in the sky. Player has an option to explore the 
+						|	surrounding (by only moving his/her head). The game ends when player reach the black hole.
 				.links
 					a(class='btn btn-primary', href='http://youtu.be/xRgkkozEoqY') Video
 					|	 
 					a(class='btn btn-default', href='https://www.dropbox.com/s/paw79qv9jjbggrg/LastNightBuild-1.0.zip?dl=0') Executable Download
+				.footnote
+					br
+					small 
+						|	This game is a part of 
+						a(href='http://brianschrank.com/vrgames/') VR Game class
 					
 			+work('[VR] Prey', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
 				.description
 					p
-						|	[VR] Prey
+						|	Prey is a VR game that put players into an eye of wild life. Player can choose to pose either a rabbit or an eagle.
+						|	There's no solid goal in this game.
 				.links
 					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=xyziS1Jqa48') Video
 					|	 
 					a(class='btn btn-default', href='https://www.dropbox.com/s/8kkgf5n8gjxsd5s/PreyOut-1.1.zip?dl=0') Executable Download
+				.footnote
+					br
+					small 
+						|	This game is a part of 
+						a(href='http://brianschrank.com/vrgames/') VR Game class
 			
 			+work('[ART] Rend', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
 				.description
 					p
-						|	[ART] Rend
+						|	Rend is a game that let player control the size of platform they're in contact.
+						|	Player has to navigate the puzzle world using this trick to reach an exit.
 				.links
 					a(class='btn btn-primary', href='https://www.dropbox.com/s/8jtw0opldlmkzbr/Rend-v1.0final.zip?dl=0') Executable Download
-			
+				.footnote
+					br
+					small 
+						|	This game is a part of 
+						a(href='http://www.artgamedev.com/') Art Game class
 			+work('[ART] Sweatshop', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
 				.description
 					p
-						|	[ART] Sweatshop Hero
+						|	Sweatshop Hero is about making money. Your employee, however, is still a human and their performance drop overtime.
+						|	You can motivate them to raise their performance, but this will reduce their happiness.
+						|	Worker with low happiness has a faster performance drop rate.
+						|	When their happiness reach the floor, they rebel.
+						|	Your only choice is that you kill them. However, their colleagues is not happy about this.
+						|	And you know what will happen next...
+						
 				.links
 					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=f1ReduVsDYg') Video
 					|	 
 					a(class='btn btn-default', href='https://www.dropbox.com/s/hot73jpmibb3q72/Sweatshop-v1.0final.zip?dl=0') Executable Download
+				.footnote
+					br
+					small 
+						|	This game is a part of 
+						a(href='http://www.artgamedev.com/') Art Game class
 					
 			+work('[ART] Insanity Out', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
 				.description
 					p
-						|	[ART] Insanity Out
+						|	The game of balance. Too much drugs and you die. Too less drugs and you also die.
 				.links
 					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=eZzReLWqRPk') Video
 					|	 
 					a(class='btn btn-default', href='https://www.dropbox.com/s/9czyqh6vyk2s2yd/InsanityOut-v1.0final.zip?dl=0') Executable Download
+				.footnote
+					br
+					small 
+						|	This game is a part of 
+						a(href='http://www.artgamedev.com/') Art Game class
 					
 			+work('[ART] Sarkhan', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
 				.description
 					p
-						|	[ART] Sarkhan
+						|	You've become the prime minister of Sarkhan country. It's time to gain the money 
+						|	you'd spent on election campaign back. You are given choices of campaign to run.
+						|	Each one affects different group of people and produces different amount of money.
+						|	Make the most before your reign ends!
 				.links
 					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=7N6CL1t6sYk') Video
 					|	 
 					a(class='btn btn-default', href='https://www.dropbox.com/s/2m0ru5u8arospji/Sarkhan-Win32-Final.zip?dl=0') Executable Download
+				.footnote
+					br
+					small 
+						|	This game is a part of 
+						a(href='http://www.artgamedev.com/') Art Game class
 					
 			+work('[ART] Jet Drop', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
 				.description
 					p
-						|	[ART] Jet Drop
+						|	Jet Drop is a game that let you control a prototype jet board with 4 thrusters. 
+						|	On the controller, Right Shoulder, Left Shoulder, Right Analog Stick, and Left Analog Stick each control one thruster.
+						|	Your goal is to reach the bottom without slamming into the wall.
 				.links
 					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=jUTPQrYE8-k') Video
 					|	 
 					a(class='btn btn-default', href='https://www.dropbox.com/s/96sl6lrs8yolzpo/JetPackRace-v1.0final.zip?dl=0') Executable Download
+				.footnote
+					br
+					small 
+						|	This game is a part of 
+						a(href='http://www.artgamedev.com/') Art Game class
 					
 			+work('Last Stand, Mini Game Project for DKS Arcade', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-professional')
 				.description
 					p
-						|	[ART] Jet Drop
+						|	Last Stand is a shoot-em-up survival style game. You shoot down an enemy ship before it reaches you and kills you.
+						|	Special enemy spawns after player reach certain point. If the player still survives, the difficulty increases and
+						|	the whole process is restarted.
 				.links
 					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=5j8BAg4eFNk') Video
 		
-			hr
-		
 			footer
-				|	By the way, this website is also in HTML and JS category. It's written in Jade and compiled into HTML.
+				|	By the way, this website is also gin HTML and JS category. It's written in Jade and compiled into HTML.
 				|	You could 
 				a(href='https://github.com/bongikairu/bongikairu.github.io') read its source here
 				|	.
