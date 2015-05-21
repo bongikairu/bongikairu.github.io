@@ -10,8 +10,10 @@ html(lang='en')
 		title Sutas's Portfolio
 		// Latest compiled and minified CSS
 		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
-		// Optional theme
-		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css')
+		//- Optional theme
+		//- link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css')
+		// favicon from http://www.freefavicon.com/freefavicons/objects/iconinfo/wood-box-152-194864.html
+		link(rel='icon', type='image/x-icon', href='favicon.ico')
 		// HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
 		// WARNING: Respond.js doesn't work if you view the page via file://
 		<!--[if lt IE 9]>
@@ -28,6 +30,9 @@ html(lang='en')
 			.container {
 				background: #FFFFFF;
 			}
+			.inactive {
+				opacity: 0.3;
+			}
 	body
 		.container
 			#title.row
@@ -39,21 +44,21 @@ html(lang='en')
 							p(id='headback', class='text-right')
 								a(class='btn btn-default', href='http://kennyzero.me/') Back to kennyzero.me
 			#filter.row
-				.col-md-4
+				div(class='col-md-4 filter', data-filtertype='tag-phphtmljs')
 					img(class='img-responsive', src='http://placehold.it/360x222')
 					h2 PHP, HTML, and JS
 					p
 						|	PHP is a number one web development language. 
 						|	Together with HTML and Javascript, it brings the world of 
 						|	world wide web to its current state nowadays.
-				.col-md-4
+				div(class='col-md-4 filter', data-filtertype='tag-cppcs')
 					img(class='img-responsive', src='http://placehold.it/360x222')
 					h2 C++ and C#
 					p
 						|	Everyone knows that C++ is fast. But to achieve that speed, 
 						|	you need to dive deep into the unknown. C#, in the other hand, 
 						|	make many development technique viable for average programmer.
-				.col-md-4
+				div(class='col-md-4 filter', data-filtertype='tag-gamedev')
 					img(class='img-responsive', src='http://placehold.it/360x222')
 					h2 Game Development
 					p
@@ -61,6 +66,16 @@ html(lang='en')
 						|	It's a midway between aesthetic and technological advancement. 
 						|	One can not make a great game that doesn't run,
 						|	and one can not make a perfect game that doesn't appeal.
+			
+			#filter2.row
+				.col-md-12
+					|	Also: 
+					button(class='btn btn-primary filter', data-filtertype='tag-professional') Professional
+					|	 
+					button(class='btn btn-success filter', data-filtertype='tag-classwork') Classwork
+					|	 
+					button(class='btn btn-info filter', data-filtertype='tag-hobby') Hobby
+			
 			hr
 			
 			+work('DKS Digitalkeystore.co.th', 'http://placehold.it/165x220', 'tag-phphtmljs', 'tag-professional')
@@ -68,7 +83,9 @@ html(lang='en')
 					p
 						|	Digitalkeystore is Thailand's number one game and gaming peripherals 
 						|	online retailer. It uses many automated systems to reduce wasted time 
-						|	on both customer and server side. As of now, I'm a part-time 
+						|	on both customer and server side. 
+						|	In 2013, I wrote a system that automated order fulfillment process.
+						|	As of now, I'm a part-time 
 						|	Software Engineer overseeing website technical aspect.
 				.links
 					a(class='btn btn-primary', href='https://dks.in.th/') Storefront
@@ -80,7 +97,7 @@ html(lang='en')
 					p
 						|	 New Bloom is a yearly event in 
 						a(href='http://blog.dota2.com/') Dota 2
-						|	. In 2015, this event allow players to join a special game mode during 
+						|	. In 2015, this event allows players to join a special game mode during 
 						|	the year beast active time (20 minutes every 2-3 hours).
 						|	Yearbeast Tracker is built to solve many problems, namely
 					ol
@@ -89,7 +106,7 @@ html(lang='en')
 						li Allow external services to benefit from tracking data (such as message alert to phone)
 					p
 						|	Through its lifespan of 3 weeks, it serves over 600,000 users with over 
-						|	20 millions pageviews (According to Google Analytics). Cost of this operation, 
+						|	20 million page views (According to Google Analytics). The cost of this operation, 
 						|	surprisingly, is under $50.
 				.links
 					a(class='btn btn-primary', href='http://2015.yearbeast.com/') Main site
@@ -100,14 +117,14 @@ html(lang='en')
 				.description
 					p
 						|	iNoteSlide is a cross-platform annotation sharing system aims to integrate technology into 
-						|	ever-changing world of study. It gives students an option to take note directly on learning 
+						|	the ever-changing world of study. It gives students an option to take note directly on learning 
 						|	materials on their tablet computer. This system is developed with JavaScript, HTML, and CSS, 
 						|	and use PhoneGap as a base framework. It can be deployed on any tablet running iOS or Android, 
 						|	but requires connection to server in order to do some task.	
 					p
 						|	This project is an undergrad-level capstone project. The development team consists of 
 						a(href='https://th.linkedin.com/pub/attaphon-predaboon/42/684/211/th') Attaphon Predaboon
-						|	, Sorawit Jaroenbenjawong, and myself under supervision of 
+						|	, Sorawit Jaroenbenjawong, and myself under a supervision of 
 						a(href='http://www.cp.eng.chula.ac.th/~somchai/index0.htm') Assoc Prof Dr Somchai Prasitjutrakul
 						|	.
 				.links
@@ -347,5 +364,23 @@ html(lang='en')
 		// Include all compiled plugins (below), or include individual files as needed
 		// Latest compiled and minified JavaScript
 		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+		
+		// page js
+		script().
+			$(function(){
+				$('.filter').click(function() {
+					if($(this).hasClass('active')) {
+						$('.work').fadeIn('fast');
+						$('.filter').removeClass('inactive').removeClass('active');
+					} else {
+						var tag = $(this).attr('data-filtertype');
+						$('.work:not(' + tag + ')').fadeOut('fast');
+						$('.work.' + tag).fadeIn('fast');
+						$('.filter').addClass('inactive').removeClass('active');
+						$(this).removeClass('inactive');
+						$(this).addClass('active');
+					}
+				});
+			});
 		
 //- EOF

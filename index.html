@@ -8,8 +8,8 @@
     <title>Sutas's Portfolio</title>
     <!-- Latest compiled and minified CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <!-- Optional theme-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <!-- favicon from http://www.freefavicon.com/freefavicons/objects/iconinfo/wood-box-152-194864.html-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
     <!-- WARNING: Respond.js doesn't work if you view the page via file://--><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -24,6 +24,9 @@
       }
       .container {
       	background: #FFFFFF;
+      }
+      .inactive {
+      	opacity: 0.3;
       }
     </style>
   </head>
@@ -41,7 +44,7 @@
         </div>
       </div>
       <div id="filter" class="row">
-        <div class="col-md-4"><img src="http://placehold.it/360x222" class="img-responsive">
+        <div data-filtertype="tag-phphtmljs" class="col-md-4 filter"><img src="http://placehold.it/360x222" class="img-responsive">
           <h2>PHP, HTML, and JS</h2>
           <p>
             	PHP is a number one web development language. 
@@ -49,7 +52,7 @@
             	world wide web to its current state nowadays.
           </p>
         </div>
-        <div class="col-md-4"><img src="http://placehold.it/360x222" class="img-responsive">
+        <div data-filtertype="tag-cppcs" class="col-md-4 filter"><img src="http://placehold.it/360x222" class="img-responsive">
           <h2>C++ and C#</h2>
           <p>
             	Everyone knows that C++ is fast. But to achieve that speed, 
@@ -57,7 +60,7 @@
             	make many development technique viable for average programmer.
           </p>
         </div>
-        <div class="col-md-4"><img src="http://placehold.it/360x222" class="img-responsive">
+        <div data-filtertype="tag-gamedev" class="col-md-4 filter"><img src="http://placehold.it/360x222" class="img-responsive">
           <h2>Game Development</h2>
           <p>
             	I love games, and that's why I choose to study game development. 
@@ -65,6 +68,13 @@
             	One can not make a great game that doesn't run,
             	and one can not make a perfect game that doesn't appeal.
           </p>
+        </div>
+      </div>
+      <div id="filter2" class="row">
+        <div class="col-md-12">	Also: 
+          <button data-filtertype="tag-professional" class="btn btn-primary filter">Professional</button>	 
+          <button data-filtertype="tag-classwork" class="btn btn-success filter">Classwork</button>	 
+          <button data-filtertype="tag-hobby" class="btn btn-info filter">Hobby</button>
         </div>
       </div>
       <hr>
@@ -79,7 +89,9 @@
               <p>
                 	Digitalkeystore is Thailand's number one game and gaming peripherals 
                 	online retailer. It uses many automated systems to reduce wasted time 
-                	on both customer and server side. As of now, I'm a part-time 
+                	on both customer and server side. 
+                	In 2013, I wrote a system that automated order fulfillment process.
+                	As of now, I'm a part-time 
                 	Software Engineer overseeing website technical aspect.
               </p>
             </div>
@@ -96,7 +108,7 @@
             <div><span class="label label-default"><span aria-hidden="true" class="glyphicon glyphicon-cloud"></span> PHP, HTML, and JS</span> <span class="label label-info"><span aria-hidden="true" class="glyphicon glyphicon-heart"></span> Hobby Project</span> 
             </div><br/>
             <div class="description">
-              <p>	 New Bloom is a yearly event in <a href="http://blog.dota2.com/">Dota 2</a>	. In 2015, this event allow players to join a special game mode during 
+              <p>	 New Bloom is a yearly event in <a href="http://blog.dota2.com/">Dota 2</a>	. In 2015, this event allows players to join a special game mode during 
                 	the year beast active time (20 minutes every 2-3 hours).
                 	Yearbeast Tracker is built to solve many problems, namely
               </p>
@@ -107,7 +119,7 @@
               </ol>
               <p>
                 	Through its lifespan of 3 weeks, it serves over 600,000 users with over 
-                	20 millions pageviews (According to Google Analytics). Cost of this operation, 
+                	20 million page views (According to Google Analytics). The cost of this operation, 
                 	surprisingly, is under $50.
               </p>
             </div>
@@ -126,12 +138,12 @@
             <div class="description">
               <p>
                 	iNoteSlide is a cross-platform annotation sharing system aims to integrate technology into 
-                	ever-changing world of study. It gives students an option to take note directly on learning 
+                	the ever-changing world of study. It gives students an option to take note directly on learning 
                 	materials on their tablet computer. This system is developed with JavaScript, HTML, and CSS, 
                 	and use PhoneGap as a base framework. It can be deployed on any tablet running iOS or Android, 
                 	but requires connection to server in order to do some task.	
               </p>
-              <p>	This project is an undergrad-level capstone project. The development team consists of <a href="https://th.linkedin.com/pub/attaphon-predaboon/42/684/211/th">Attaphon Predaboon</a>	, Sorawit Jaroenbenjawong, and myself under supervision of <a href="http://www.cp.eng.chula.ac.th/~somchai/index0.htm">Assoc Prof Dr Somchai Prasitjutrakul</a>	.</p>
+              <p>	This project is an undergrad-level capstone project. The development team consists of <a href="https://th.linkedin.com/pub/attaphon-predaboon/42/684/211/th">Attaphon Predaboon</a>	, Sorawit Jaroenbenjawong, and myself under a supervision of <a href="http://www.cp.eng.chula.ac.th/~somchai/index0.htm">Assoc Prof Dr Somchai Prasitjutrakul</a>	.</p>
             </div>
             <div class="links"><a href="https://drive.google.com/file/d/0B9t-pfvf5EFpanFWX2laRGlYVjA/view?usp=sharing" class="btn btn-primary">Presentation Slide </a></div>
           </div>
@@ -467,5 +479,24 @@
     <!-- Include all compiled plugins (below), or include individual files as needed-->
     <!-- Latest compiled and minified JavaScript-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- page js-->
+    <script>
+      $(function(){
+      	$('.filter').click(function() {
+      		if($(this).hasClass('active')) {
+      			$('.work').fadeIn('fast');
+      			$('.filter').removeClass('inactive').removeClass('active');
+      		} else {
+      			var tag = $(this).attr('data-filtertype');
+      			$('.work:not(' + tag + ')').fadeOut('fast');
+      			$('.work.' + tag).fadeIn('fast');
+      			$('.filter').addClass('inactive').removeClass('active');
+      			$(this).removeClass('inactive');
+      			$(this).addClass('active');
+      		}
+      	});
+      });
+      
+    </script>
   </body>
 </html>
