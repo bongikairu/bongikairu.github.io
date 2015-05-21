@@ -1,0 +1,259 @@
+include mixin
+
+doctype html
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		// The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+		title Sutas's Portfolio
+		// Latest compiled and minified CSS
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+		// Optional theme
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css')
+		// HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+		// WARNING: Respond.js doesn't work if you view the page via file://
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		style(type='text/css').
+			#headback {
+				float: right;
+			}
+			body {
+				background: #302C28;
+			}
+			.container {
+				background: #FFFFFF;
+			}
+	body
+		.container
+			#title.row
+				.col-md-12
+					.page-header
+						h1(id='headtext') Hello!
+							|  
+							small What kind of work you're looking for from my portfolio?
+							p(id='headback', class='text-right')
+								a(class='btn btn-default', href='http://kennyzero.me/') Back to kennyzero.me
+			#filter.row
+				.col-md-4
+					img(class='img-responsive', src='http://placehold.it/360x222')
+					h2 PHP, HTML, and JS
+					p
+						|	PHP is a number one web development language. 
+						|	Together with HTML and Javascript, it brings a world of 
+						|	world wide web to its current state nowadays.
+				.col-md-4
+					img(class='img-responsive', src='http://placehold.it/360x222')
+					h2 C++ and C#
+					p
+						|	Everyone knows that C++ is fast. But to achieve that speed, 
+						|	you need to dive deep into the unknown. C#, in the other hand, 
+						|	make many development technique viable for average programmer.
+				.col-md-4
+					img(class='img-responsive', src='http://placehold.it/360x222')
+					h2 Game Development
+					p
+						|	I love games, and that's why I choose to study game development. 
+						|	It's a midway between aesthetic and technological advancement. 
+						|	One can not make a great game that doesn't run,
+						|	and one can not make a perfect game that doesn't appeal.
+			hr
+			
+			+work('DKS Digitalkeystore.co.th', 'http://placehold.it/165x220', 'tag-phphtmljs', 'tag-professional')
+				.description
+					p
+						|	Digitalkeystore is Thailand's number one game and gaming peripherals 
+						|	online retailer. It uses many automated systems to reduce wasted time 
+						|	on both customer and server side. As of now, I'm a part-time 
+						|	Software Engineer overseeing website technical aspect.
+				.links
+					a(class='btn btn-primary', href='https://dks.in.th/') Storefront
+					|  
+					a(class='btn btn-default', href='http://digitalkeystore.co.th/') Corporate Site
+					
+			+work('Yearbeast Tracker', 'http://placehold.it/165x220', 'tag-phphtmljs', 'tag-hobby')
+				.description
+					p
+						|	 New Bloom is a yearly event in 
+						a(href='http://blog.dota2.com/') Dota 2
+						|	. In 2015, this event allow players to join a special game mode during 
+						|	the year beast active time (20 minutes every 2-3 hours).
+						|	Yearbeast Tracker is built to solve many problems, namely
+					ol
+						li Allow estimate time of next year beast (became obsolete half-way through event)
+						li Allow player to track the beast without opening Dota 2
+						li Allow external services to benefit from tracking data (such as message alert to phone)
+					p
+						|	Through its lifespan of 3 weeks, it serves over 600,000 users with over 
+						|	20 millions pageviews (According to Google Analytics). Cost of this operation, 
+						|	surprisingly, is under $50.
+				.links
+					a(class='btn btn-primary', href='http://2015.yearbeast.com/') Main site
+					|  
+					a(class='btn btn-default', href='https://github.com/bongikairu/yearbeast2015') Git Repo
+			
+			+work('iNoteSlide', 'http://placehold.it/165x220', 'tag-phphtmljs', 'tag-classwork')
+				.description
+					p
+						|	iNoteSlide is a cross-platform annotation sharing system aims to integrate technology into 
+						|	ever-changing world of study. It gives students an option to take note directly on learning 
+						|	materials on their tablet computer. This system is developed with JavaScript, HTML, and CSS, 
+						|	and use PhoneGap as a base framework. It can be deployed on any tablet running iOS or Android, 
+						|	but requires connection to server in order to do some task.	
+					p
+						|	This project is an undergrad-level capstone project. The development team consists of 
+						a(href='https://th.linkedin.com/pub/attaphon-predaboon/42/684/211/th') Attaphon Predaboon
+						|	, Sorawit Jaroenbenjawong, and myself under supervision of 
+						a(href='http://www.cp.eng.chula.ac.th/~somchai/index0.htm') Assoc Prof Dr Somchai Prasitjutrakul
+						|	.
+				.links
+					a(class='btn btn-primary', href='https://drive.google.com/file/d/0B9t-pfvf5EFpanFWX2laRGlYVjA/view?usp=sharing') Presentation Slide 
+		
+			+work('In-house Game Engine', 'http://placehold.it/165x220', 'tag-cppcs', 'tag-gamedev', 'tag-classwork')
+				.description
+					p
+						|	Game engine in keenan class
+				.links
+					a(class='btn btn-primary', href='http://www.cdm.depaul.edu/academics/pages/classinfo.aspx?Term=20152&ClassNbr=20192&fid=718577') Class Website
+					|	 
+					a(class='btn btn-default', href='https://www.youtube.com/watch?v=YC8LyJmrKDw') Presentation Video 1
+					|	 
+					a(class='btn btn-default', href='https://www.youtube.com/watch?v=8p7cg4UDcKw') Presentation Video 2
+					
+			+work('Network-enabled Omega Race', 'http://placehold.it/165x220', 'tag-cppcs', 'tag-gamedev', 'tag-classwork')
+				.description
+					p
+						|	Game network in keenan class
+				.links
+					a(class='btn btn-primary', href='http://www.cdm.depaul.edu/academics/pages/classinfo.aspx?Term=20143&ClassNbr=30494&fid=718577') Class Website
+					|	 
+					a(class='btn btn-default', href='https://www.youtube.com/watch?v=Y5MZ7-oLWcE') Presentation Video
+					
+			+work('Optimization of C++ Particle System', 'http://placehold.it/165x220', 'tag-cppcs', 'tag-gamedev', 'tag-classwork')
+				.description
+					p
+						|	C++ optimization in keenan class
+				.links
+					a(class='btn btn-primary', href='http://www.cdm.depaul.edu/academics/pages/classinfo.aspx?Term=20151&ClassNbr=17026&fid=718577') Class Website
+					|	 
+					a(class='btn btn-default', href='https://www.dropbox.com/s/zymd56dr7oj2ozl/GameParticles.rar?dl=0') Final Project Executable Download
+					
+			+work('Web-based Valve\'s Source Model Viewer (In progress)', 'http://placehold.it/165x220', 'tag-cppcs', 'tag-gamedev', 'tag-hobby')
+				.description
+					p
+						|	Web-based model viewer that accepts Valve's Source format (MDL, VVD, VMT, VTF). Work in progress.
+						
+			+work('Iconic Encounter (Work in progress)', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
+				.description
+					p
+						|	C++ optimization in keenan class
+				.links
+					a(class='btn btn-primary', href='http://www.quintforcedev.com/current-build') Website
+					
+			+work('[VR] MockBand', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
+				.description
+					p
+						|	[VR] MockBand
+				.links
+					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=2NyhvdtCaCs') Video
+					|	 
+					a(class='btn btn-default', href='https://www.dropbox.com/s/yboaup8747z84hy/Mockband-0.95.rar?dl=0') Executable Download
+					
+			+work('[VR] DayGround', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
+				.description
+					p
+						|	[VR] DayGround
+				.links
+					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=XnNrcCkM-UQ') Video
+					|	 
+					a(class='btn btn-default', href='https://www.dropbox.com/s/yz64bekclpop8mm/DayGround-0.6-NoOVR.rar?dl=0') Executable Download (Non-VR)
+			
+			+work('[VR] Last night', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
+				.description
+					p
+						|	[VR] Last Night
+				.links
+					a(class='btn btn-primary', href='http://youtu.be/xRgkkozEoqY') Video
+					|	 
+					a(class='btn btn-default', href='https://www.dropbox.com/s/paw79qv9jjbggrg/LastNightBuild-1.0.zip?dl=0') Executable Download
+					
+			+work('[VR] Prey', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
+				.description
+					p
+						|	[VR] Prey
+				.links
+					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=xyziS1Jqa48') Video
+					|	 
+					a(class='btn btn-default', href='https://www.dropbox.com/s/8kkgf5n8gjxsd5s/PreyOut-1.1.zip?dl=0') Executable Download
+			
+			+work('[ART] Rend', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
+				.description
+					p
+						|	[ART] Rend
+				.links
+					a(class='btn btn-primary', href='https://www.dropbox.com/s/8jtw0opldlmkzbr/Rend-v1.0final.zip?dl=0') Executable Download
+			
+			+work('[ART] Sweatshop', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
+				.description
+					p
+						|	[ART] Sweatshop Hero
+				.links
+					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=f1ReduVsDYg') Video
+					|	 
+					a(class='btn btn-default', href='https://www.dropbox.com/s/hot73jpmibb3q72/Sweatshop-v1.0final.zip?dl=0') Executable Download
+					
+			+work('[ART] Insanity Out', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
+				.description
+					p
+						|	[ART] Insanity Out
+				.links
+					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=eZzReLWqRPk') Video
+					|	 
+					a(class='btn btn-default', href='https://www.dropbox.com/s/9czyqh6vyk2s2yd/InsanityOut-v1.0final.zip?dl=0') Executable Download
+					
+			+work('[ART] Sarkhan', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
+				.description
+					p
+						|	[ART] Sarkhan
+				.links
+					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=7N6CL1t6sYk') Video
+					|	 
+					a(class='btn btn-default', href='https://www.dropbox.com/s/2m0ru5u8arospji/Sarkhan-Win32-Final.zip?dl=0') Executable Download
+					
+			+work('[ART] Jet Drop', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-classwork')
+				.description
+					p
+						|	[ART] Jet Drop
+				.links
+					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=jUTPQrYE8-k') Video
+					|	 
+					a(class='btn btn-default', href='https://www.dropbox.com/s/96sl6lrs8yolzpo/JetPackRace-v1.0final.zip?dl=0') Executable Download
+					
+			+work('Last Stand, Mini Game Project for DKS Arcade', 'http://placehold.it/165x220', 'tag-gamedev', 'tag-professional')
+				.description
+					p
+						|	[ART] Jet Drop
+				.links
+					a(class='btn btn-primary', href='https://www.youtube.com/watch?v=5j8BAg4eFNk') Video
+		
+			hr
+		
+			footer
+				|	By the way, this website is also in HTML and JS category. It's written in Jade and compiled into HTML.
+				|	You could 
+				a(href='https://github.com/bongikairu/bongikairu.github.io') read its source here
+				|	.
+		
+			br
+		
+		// jQuery (necessary for Bootstrap's JavaScript plugins)
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+		// Include all compiled plugins (below), or include individual files as needed
+		// Latest compiled and minified JavaScript
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+		
+//- EOF
