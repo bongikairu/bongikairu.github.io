@@ -483,25 +483,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed-->
     <!-- Latest compiled and minified JavaScript-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <!-- page js-->
-    <script>
-      $(function(){
-      	$('.filter').click(function() {
-      		if($(this).hasClass('active')) {
-      			$('.work').fadeIn('fast');
-      			$('.filter').removeClass('inactive').removeClass('active');
-      		} else {
-      			var tag = $(this).attr('data-filtertype');
-      			$('.work:not(' + tag + ')').fadeOut('fast');
-      			$('.work.' + tag).fadeIn('fast');
-      			$('.filter').addClass('inactive').removeClass('active');
-      			$(this).removeClass('inactive');
-      			$(this).addClass('active');
-      		}
-      	});
-      });
-      
-    </script>
     <!-- tracking-->
     <!-- Start of Woopra Code-->
     <script>
@@ -515,5 +496,32 @@
       woopra.track();
     </script>
     <!-- End of Woopra Code-->
+    <!-- page js-->
+    <script>
+      $(function(){
+      	$('.filter').click(function() {
+      		if($(this).hasClass('active')) {
+      			$('.work').fadeIn('fast');
+      			$('.filter').removeClass('inactive').removeClass('active');
+      			
+      			if(woopra) woopra.track("filter", {
+      				ftag: "none"
+      			});
+      		} else {
+      			var tag = $(this).attr('data-filtertype');
+      			$('.work:not(' + tag + ')').fadeOut('fast');
+      			$('.work.' + tag).fadeIn('fast');
+      			$('.filter').addClass('inactive').removeClass('active');
+      			$(this).removeClass('inactive');
+      			$(this).addClass('active');
+      			
+      			if(woopra) woopra.track("filter", {
+      				ftag: tag
+      			});
+      		}
+      	});
+      });
+      
+    </script>
   </body>
 </html>
