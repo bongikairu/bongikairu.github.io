@@ -1,0 +1,38 @@
+
+body {
+  background: #302C28;
+
+  .container {
+    background: #FFFFFF;
+
+    #headtext {
+      small {
+        margin-left: 10px;
+      }
+    }
+
+    #headback {
+      float: right;
+    }
+
+    #filter {
+      cursor: pointer;
+      cursor: hand;
+
+      .filter.inactive {
+        opacity: 0.3;
+      }
+
+    }
+
+    #filter2 {
+      button {
+        margin-left: 5px;
+      }
+    }
+
+  }
+
+}
+
+

@@ -1,0 +1,43 @@
+mixin label(type)
+    span(class='label' class=type)
+        block
+
+mixin work(title, imgurl, ...tags)
+    div(class='work' class=tags)
+        .row
+            .col-md-2
+                img(class='img-responsive', src=imgurl)
+            .col-md-10
+                h3= title
+                div
+                    each tag in tags
+                        case tag
+                            when 'tag-phphtmljs'
+                                +label('label-default')
+                                    span(class='glyphicon glyphicon-cloud', aria-hidden='true')
+                                    |  PHP, HTML, and JS
+                            when 'tag-cppcs'
+                                +label('label-warning')
+                                    span(class='glyphicon glyphicon-tasks', aria-hidden='true')
+                                    |  C++ and C#
+                            when 'tag-gamedev'
+                                +label('label-danger')
+                                    span(class='glyphicon glyphicon-tower', aria-hidden='true')
+                                    |  Game Development
+                            when 'tag-professional'
+                                +label('label-primary')
+                                    span(class='glyphicon glyphicon-briefcase', aria-hidden='true')
+                                    |  Professional Work
+                            when 'tag-classwork'
+                                +label('label-success')
+                                    span(class='glyphicon glyphicon-education', aria-hidden='true')
+                                    |  Classwork
+                            when 'tag-hobby'
+                                +label('label-info')
+                                    span(class='glyphicon glyphicon-heart', aria-hidden='true')
+                                    |  Hobby Project
+                        |
+                br
+                block
+        br
+        hr

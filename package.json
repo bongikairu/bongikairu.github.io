@@ -1,0 +1,24 @@
+{
+  "name": "bongikairu.github.io",
+  "version": "1.0.0",
+  "description": "Sutas's portfolio website repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/pug index.pug && node_modules/.bin/node-sass --output-style compressed style.scss > style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bongikairu/bongikairu.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bongikairu/bongikairu.github.io/issues"
+  },
+  "homepage": "https://github.com/bongikairu/bongikairu.github.io#readme",
+  "dependencies": {
+    "node-sass": "^4.5.0",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
