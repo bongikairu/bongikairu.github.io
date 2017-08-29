@@ -686,7 +686,7 @@ class App extends Component {
                         <Row>
                             <Col md={12} xs={3}>
                                 <div className="visible-xs-block" style={{height: 20}}/>
-                                <ResponsiveImage src="/images/port-cover-html-2.jpg"/>
+                                <ResponsiveImage src="images/port-cover-html-2.jpg"/>
                             </Col>
                             <Col md={12} xs={9}>
                                 <h2>Website</h2>
@@ -703,7 +703,7 @@ class App extends Component {
                         <Row>
                             <Col md={12} xs={3}>
                                 <div className="visible-xs-block" style={{height: 20}}/>
-                                <ResponsiveImage src="/images/port-cover-cpp.jpg"/>
+                                <ResponsiveImage src="images/port-cover-cpp.jpg"/>
                             </Col>
                             <Col md={12} xs={9}>
 
@@ -721,7 +721,7 @@ class App extends Component {
                         <Row>
                             <Col md={12} xs={3}>
                                 <div className="visible-xs-block" style={{height: 20}}/>
-                                <ResponsiveImage src="/images/port-cover-game.jpg"/>
+                                <ResponsiveImage src="images/port-cover-game.jpg"/>
                             </Col>
                             <Col md={12} xs={9}>
                                 <h2>Game Dev</h2>
@@ -740,7 +740,7 @@ class App extends Component {
                         <Row>
                             <Col md={12} xs={3}>
                                 <div className="visible-xs-block" style={{height: 20}}/>
-                                <ResponsiveImage src="/images/port-cover-pro.jpg"/>
+                                <ResponsiveImage src="images/port-cover-pro.jpg"/>
                             </Col>
                             <Col md={12} xs={9}>
                                 <h2>Professional</h2>
