@@ -1,24 +1,24 @@
 {
   "name": "bongikairu.github.io",
-  "version": "1.0.0",
-  "description": "Sutas's portfolio website repository",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node_modules/.bin/pug index.pug && node_modules/.bin/node-sass --output-style compressed style.scss > style.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bongikairu/bongikairu.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bongikairu/bongikairu.github.io/issues"
-  },
-  "homepage": "https://github.com/bongikairu/bongikairu.github.io#readme",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "node-sass": "^4.5.0",
-    "pug-cli": "^1.0.0-alpha6"
-  }
+    "firebase": "^4.3.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "react": "^15.6.1",
+    "react-bootstrap": "^0.31.2",
+    "react-dom": "^15.6.1",
+    "react-draggable": "^3.0.2",
+    "react-motion": "^0.5.1",
+    "react-scripts": "1.0.12",
+    "reactfire": "^1.0.0",
+    "styled-components": "^2.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "homepage": "http://kennyzero.me/build"
 }
